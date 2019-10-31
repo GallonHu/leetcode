@@ -26,7 +26,7 @@ A solution set is:
 
 ### 注意
 
-- python: res.append(temp[:])
+- python: res.append(temp+[]) (temp[:] temp.copy() 这两种方式比较慢)
 - go
   - temp = temp[:len(temp):len(temp)] append 长度和容量的变化对结果会有影响
   - 递归时应时候 res 的指针

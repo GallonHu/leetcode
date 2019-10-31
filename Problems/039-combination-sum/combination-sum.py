@@ -1,10 +1,8 @@
 class Solution:
-    def combinationSum(self, candidates, target: int):
+    def combinationSum(self, candidates: List[int], target: int)  -> List[List[int]]:
         def backtarck(remain, start, end):
             if remain == 0:
                 res.append(temp[:])
-                return
-            elif remain < 0:
                 return
             
             for i in range(start, end):

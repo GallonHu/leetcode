@@ -27,9 +27,7 @@ func backtrack(candidates []int, res *[][]int, temp []int, remain, start, end in
 	temp = temp[:len(temp):len(temp)]
 	for i := start; i < end; i++ {
 		remain -= candidates[i]
-		if remain < 0 {
-			break
-		}
+
 		temp = append(temp, candidates[i])
 		backtrack(candidates, res, temp, remain, i, end)
 		remain += temp[len(temp)-1]
